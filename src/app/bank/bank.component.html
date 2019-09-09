@@ -1,0 +1,39 @@
+<meta name="viewport" content="width='device-width', intial-scale=1.0">
+<fieldset id="a2">
+    <p>Bank Search Application</p>
+</fieldset>
+<select name="a" id="b">
+    <option value="MUMBAI" (click)="add()">MUMBAI</option>
+    <option value="DELHI">DELHI</option>
+    <option value="KOLKATA">KOLKATA</option>
+    <option value="BANGALORE">BANGALORE</option>
+    <option value="CUTTACK">CUTTACK</option>
+</select>
+<p></p>
+<button (click)="add()">MUMBAI</button>&nbsp;
+<button (click)="add1()">DELHI</button>&nbsp;
+<button (click)="add2()">KOLKATA</button>&nbsp;
+<button (click)="add3()">BANGALORE</button>&nbsp;
+<button (click)="add4()">CUTTACK</button>&nbsp;
+
+<p><span id="b1">List of banks in MUMBAI </span>
+    <input type="search" placeholder="Search" id="b2" [(ngModel)]="search"></p>
+<table>
+    <tr>
+        <th>Action</th>
+        <th>Bank Name</th>
+        <th>IFIC Code</th>
+        <th>Bank ID</th>
+        <th>Branch</th>
+        <th id="b3">Address</th>
+    </tr>
+    
+    <tr *ngFor='let a of dataMUMBAI|customerEmailFilter:search;let i=index'>
+        <td><input type="radio" name="name" (click)="check()"></td>
+        <td>{{a.branch}}</td>
+        <td>{{a.ifsc}}</td>
+        <td>{{a.bank_id}}</td>
+        <td>{{a.city}}</td>
+        <td>{{a.address}}</td>
+    </tr>
+</table>

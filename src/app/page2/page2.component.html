@@ -1,0 +1,14 @@
+<body>
+<div>
+<form [formGroup]="page2">
+  <label>Username</label><br><br>
+  <input type="text" formControlName = "username"><br><br>
+  <br>
+  <label>Password</label><br><br>
+  <input type = "password" formControlName = "password"><br><br>
+  <br>
+  <button (click)="open2(page2.value)">Login</button>
+  <!-- <button type="button" (click)="fun()">login</button> -->
+</form>
+</div>
+</body>

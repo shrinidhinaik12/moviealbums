@@ -1,0 +1,19 @@
+<body>
+<div>
+    <form [formGroup]="page1">
+    <label>Username</label>
+    <br><br>
+    <input type="text" formControlName = "username"><br><br>
+    <br>
+    <label>Password</label><br><br>
+    <input type="password" formControlName = "password"><br><br>
+    <br>
+    <label>Confirm Password</label><br><br>
+    <input type="password" formControlName = "confirm"><br><br>
+    <br>
+    <button type="submit" (click)="open(page1.value)">SUBMIT</button>
+    <br><br>
+    <p>Already have an account?<u style="text-decoration: none" (click) = "click()"> Login</u></p>
+</form>
+</div>
+</body>
